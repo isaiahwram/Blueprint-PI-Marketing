@@ -1233,112 +1233,26 @@ p:last-child { margin-bottom: 0; }
         </ul>
       </div>
 
-      <form class="form-card" id="apply-form" novalidate>
-        <h3>Application</h3>
-        <p class="form-card__sub">All fields marked <span style="color: var(--bp-cyan)">*</span> required.</p>
-
-        <div class="form-grid form-grid--two">
-          <div class="field">
-            <label for="firstName">First name <span class="req">*</span></label>
-            <input id="firstName" name="firstName" type="text" required autocomplete="given-name" />
-          </div>
-          <div class="field">
-            <label for="lastName">Last name <span class="req">*</span></label>
-            <input id="lastName" name="lastName" type="text" required autocomplete="family-name" />
-          </div>
-        </div>
-
-        <div class="form-grid form-grid--two" style="margin-top: 18px;">
-          <div class="field">
-            <label for="email">Work email <span class="req">*</span></label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@yourclinic.com" />
-          </div>
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" />
-          </div>
-        </div>
-
-        <div class="form-grid form-grid--two" style="margin-top: 18px;">
-          <div class="field">
-            <label for="clinic">Clinic / practice name <span class="req">*</span></label>
-            <input id="clinic" name="clinic" type="text" required autocomplete="organization" />
-          </div>
-          <div class="field">
-            <label for="role">Your role <span class="req">*</span></label>
-            <select id="role" name="role" required>
-              <option value="">Select one&hellip;</option>
-              <option>Owner / Operator</option>
-              <option>Chiropractor</option>
-              <option>Clinic Director / Administrator</option>
-              <option>Marketing lead</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-grid form-grid--two" style="margin-top: 18px;">
-          <div class="field">
-            <label for="city">City / market <span class="req">*</span></label>
-            <input id="city" name="city" type="text" required placeholder="e.g., Charlotte, NC" />
-          </div>
-          <div class="field">
-            <label for="patients">New PI patients / month <span class="req">*</span></label>
-            <select id="patients" name="patients" required>
-              <option value="">Select range&hellip;</option>
-              <option value="0">Under 10</option>
-              <option value="10">10–30</option>
-              <option value="50">31–75</option>
-              <option value="100">76–150</option>
-              <option value="200">150+</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-grid form-grid--two" style="margin-top: 18px;">
-          <div class="field">
-            <label for="spend">Current monthly marketing spend <span class="req">*</span></label>
-            <select id="spend" name="spend" required>
-              <option value="">Select range&hellip;</option>
-              <option value="0">Under $2,500</option>
-              <option value="5000">$2,500 – $7,500</option>
-              <option value="15000">$7,500 – $25,000</option>
-              <option value="40000">$25,000 – $75,000</option>
-              <option value="100000">$75,000+</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="ready">Ready to invest in growth?</label>
-            <select id="ready" name="ready">
-              <option value="">Select one&hellip;</option>
-              <option>Yes — within 30 days</option>
-              <option>Yes — within 90 days</option>
-              <option>Exploring options</option>
-              <option>Not yet</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field" style="margin-top: 18px;">
-          <label for="goals">What's the #1 thing you want to fix or unlock?</label>
-          <textarea id="goals" name="goals" rows="3" placeholder="e.g., We need more unattached patients walking in, attorney referrals are inconsistent, our intake is leaking leads&hellip;"></textarea>
-          <span class="field__hint">Optional — but the more specific you are, the better we can tailor your seat.</span>
-        </div>
-
-        <div class="form-submit">
-          <button type="submit" class="btn btn--cyan btn--lg" style="width: 100%;">SUBMIT APPLICATION</button>
-          <p class="form-fine">By submitting, you agree we may contact you about the masterclass and related Blueprint Digital services. We never sell your information.</p>
-        </div>
-
-        <div class="form-status form-status--ok" id="status-ok" role="status">
-          <span class="form-status__title">Application received</span>
-          You look like a strong fit. We'll review and reply within 48 hours with your confirmation and the prep materials.
-        </div>
-        <div class="form-status form-status--review" id="status-review" role="status">
-          <span class="form-status__title">Thanks — we'll be in touch</span>
-          Based on your responses, we want to learn a bit more before confirming a seat. A member of the Blueprint team will reach out personally to see if this cohort or a future session is the right fit.
-        </div>
-      </form>
+      <div class="form-card" style="padding: 0; background: var(--bp-white); overflow: hidden;">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/Rrnvv6of0JdZLGJheOOa"
+          style="width:100%; min-height:760px; border:none; border-radius: var(--radius-xl); display:block; background: var(--bp-white);"
+          id="inline-Rrnvv6of0JdZLGJheOOa"
+          data-layout='{"id":"INLINE"}'
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="PI Masterclass Application"
+          data-height="760"
+          data-layout-iframe-id="inline-Rrnvv6of0JdZLGJheOOa"
+          data-form-id="Rrnvv6of0JdZLGJheOOa"
+          title="PI Masterclass Application">
+        </iframe>
+      </div>
+      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
     </div>
   </div>
 </section>
@@ -1395,47 +1309,6 @@ p:last-child { margin-bottom: 0; }
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Application qualification (front-end heuristic)
-  const form = document.getElementById('apply-form');
-  const statusOk = document.getElementById('status-ok');
-  const statusReview = document.getElementById('status-review');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Basic native validation
-    if (!form.reportValidity()) return;
-
-    const data = new FormData(form);
-    const role = (data.get('role') || '').toString();
-    const patients = parseInt(data.get('patients') || '0', 10);
-    const spend = parseInt(data.get('spend') || '0', 10);
-    const ready = (data.get('ready') || '').toString();
-
-    // Qualification heuristic — mirrors the criteria in the "Who this is for" section
-    const isOperator = /Owner|Director|Chiropractor/i.test(role);
-    const meetsPatients = patients >= 10;
-    const meetsSpend = spend >= 5000;
-    const investmentReady = /Yes/i.test(ready) || ready === '';
-
-    const qualified = isOperator && (meetsPatients || meetsSpend) && investmentReady;
-
-    statusOk.classList.remove('is-visible');
-    statusReview.classList.remove('is-visible');
-
-    if (qualified) {
-      statusOk.classList.add('is-visible');
-      statusOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-      statusReview.classList.add('is-visible');
-      statusReview.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    // Disable submit to prevent re-fire; in production this would POST to a CRM endpoint
-    form.querySelector('button[type="submit"]').disabled = true;
-    form.querySelector('button[type="submit"]').textContent = 'APPLICATION SUBMITTED';
-  });
 </script>
 </body>
 </html>
