@@ -189,9 +189,13 @@ p:last-child { margin-bottom: 0; }
   font-weight: 900;
   font-size: 18px;
 }
-.site-header__cta { display: none; }
-@media (min-width: 768px) {
-  .site-header__cta { display: inline-flex; }
+.site-header__cta { display: inline-flex; white-space: nowrap; flex-shrink: 0; }
+.site-header__cta .cta-short { display: none; }
+@media (max-width: 767px) {
+  .site-header__inner { height: 60px; }
+  .site-header__cta { padding: 10px 18px; font-size: 11px; letter-spacing: 0.06em; }
+  .site-header__cta .cta-full { display: none; }
+  .site-header__cta .cta-short { display: inline; }
 }
 
 /* =========================================================================
@@ -802,56 +806,6 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* =========================================================================
-   Footer
-   ========================================================================= */
-.site-footer {
-  background: var(--bp-navy-ink);
-  color: var(--fg-on-dark-2);
-  padding: 56px 0 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-.site-footer__top {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: start;
-  margin-bottom: 32px;
-}
-@media (min-width: 700px) {
-  .site-footer__top { grid-template-columns: 2fr 3fr; }
-}
-.site-footer__brand .brand-mark { color: var(--bp-white); margin-bottom: 12px; }
-.site-footer__brand p { font-size: 14px; max-width: 380px; color: var(--fg-on-dark-2); }
-.site-footer__links {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  font-size: 14px;
-}
-@media (min-width: 500px) {
-  .site-footer__links { grid-template-columns: repeat(2, 1fr); }
-}
-.site-footer__links h5 {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--bp-cyan);
-  margin: 0 0 12px 0;
-}
-.site-footer__links ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-.site-footer__links a { color: var(--fg-on-dark-2); }
-.site-footer__links a:hover { color: var(--bp-white); }
-
-.site-footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding-top: 20px;
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
-  font-size: 12px;
-}
-
-/* =========================================================================
    Scroll-in animation
    ========================================================================= */
 .reveal {
@@ -875,7 +829,7 @@ p:last-child { margin-bottom: 0; }
       <span class="brand-mark__b">B</span>
       <span>BLUEPRINT&nbsp;<span style="color: var(--bp-slate-500); font-weight: 600;">| PI</span></span>
     </a>
-    <a href="#apply" class="btn btn--primary site-header__cta">APPLY FOR YOUR SEAT</a>
+    <a href="#apply" class="btn btn--primary site-header__cta"><span class="cta-full">APPLY FOR YOUR SEAT</span><span class="cta-short">APPLY</span></a>
   </div>
 </header>
 
@@ -1257,48 +1211,7 @@ p:last-child { margin-bottom: 0; }
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__top">
-      <div class="site-footer__brand">
-        <div class="brand-mark">
-          <span class="brand-mark__b">B</span>
-          <span>BLUEPRINT DIGITAL</span>
-        </div>
-        <p>Performance marketing for personal-injury clinics. Atlanta-based, operating nationwide. Confidence in every campaign.</p>
-      </div>
-      <div class="site-footer__links">
-        <div>
-          <h5>The Masterclass</h5>
-          <ul>
-            <li><a href="#why">Why it exists</a></li>
-            <li><a href="#agenda">Agenda &amp; pillars</a></li>
-            <li><a href="#qualify">Who it's for</a></li>
-            <li><a href="#apply">Apply for your seat</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Blueprint</h5>
-          <ul>
-            <li><a href="https://blueprintdigital.com" target="_blank" rel="noopener">blueprintdigital.com</a></li>
-            <li><a href="https://blueprintdigital.com/case-studies/aica-case-study/" target="_blank" rel="noopener">AICA case study</a></li>
-            <li><a href="mailto:hello@blueprintdigital.com">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="site-footer__bottom">
-      <span>&copy; <span id="year"></span> Blueprint Digital. All rights reserved.</span>
-      <span>Atlanta, GA &middot; Operating nationwide</span>
-    </div>
-  </div>
-</footer>
-
 <script>
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
   // Scroll reveal
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
